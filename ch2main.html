@@ -7,7 +7,7 @@
 <script type="text/javascript">
 //等待dom元素加载完毕.
 $(document).ready(function(){
-	$("#one").css("background", "#bbffaa")
+	$("div[id][title*=es]").css("background", "#bbffaa")
 });
 </script>
 
@@ -32,7 +32,7 @@ $(document).ready(function(){
 		<div class="mini">class为mini</div>
 		<div class="mini">class为mini</div>
 		<div class="mini">class为mini</div>
-		<div class="mini" title="tesst">class为mini，title为tesst</div>
+		<div class="mini" title="tesst"></div>
 	</div>
 
 	<div style="display:none" class="none">
@@ -44,8 +44,7 @@ $(document).ready(function(){
 	<div>包含input的type为"hidden"的div <input type="hidden" size="8" /> 
 	</div>
 
-	<span class="mover">正在执行动画的span元素</span>
-
+	<span id="mover">正在执行动画的span元素</span>
 
 
 	
