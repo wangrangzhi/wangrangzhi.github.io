@@ -7,9 +7,12 @@
 <script src="jquery.js"></script>
 <script type="text/javascript">
 //等待dom元素加载完毕.
-$(function()
-	{
-		
+$(function(){
+
+		var $li = $("ul li:eq(1)");
+		var li_text = $li.text();
+		alert(li_text);
+
 	});
 </script>
 
@@ -17,6 +20,15 @@ $(function()
 </head>
 <body>
 	
+
+		
+	<p title="你最喜欢的水果">你最喜欢的水果</p>
+
+	<ul>
+		<li title='苹果'>苹果</li>
+		<li title='橘子'>橘子</li>
+		<li title='菠萝'>菠萝</li>
+	</ul>
 
 	
 
