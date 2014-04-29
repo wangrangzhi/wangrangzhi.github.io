@@ -2,35 +2,25 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>Document</title>
-
 <link rel="stylesheet" href="css/default.css" type="text/css" />
 <script src="jquery.js"></script>
 <script type="text/javascript">
 //等待dom元素加载完毕.
 $(function(){
 
-		var $li = $("ul li:eq(1)");
-		var li_text = $li.text();
-		alert(li_text);
+		$("<strong>你最不喜欢的元素</strong>").replaceAll("p");
+		$("li").wrap("<h2></h2>");
+		
 
 	});
 </script>
-
-
 </head>
 <body>
-	
-
-		
 	<p title="你最喜欢的水果">你最喜欢的水果</p>
-
 	<ul>
 		<li title='苹果'>苹果</li>
 		<li title='橘子'>橘子</li>
 		<li title='菠萝'>菠萝</li>
 	</ul>
-
-	
-
 </body>
 </html>

@@ -1,0 +1,55 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+
+<link rel="stylesheet" href="css/default.css" type="text/css" />
+<script src="jquery.js"></script>
+<script type="text/javascript">
+//等待dom元素加载完毕.
+$(function()
+	{
+		$("#address").focus(function() {
+			var txt_value = $(this).val();
+			if(txt_value == this.defaultValue)
+			{
+				$(this).val("");
+			}
+		});
+		$("#address").blur(function() {
+		var txt_val = $(this).val();
+		if(txt_val == "")
+		{
+			$(this).val(this.defaultValue);
+		}
+		});
+
+		$("#password").focus(function() {
+			var txt_value = $(this).val();
+			if(txt_value == "请输入邮箱密码")
+			{
+				$(this).val("");
+			}
+		});
+		$("#password").blur(function() {
+		var txt_val = $(this).val();
+		if(txt_val == "")
+		{
+			$(this).val("请输入邮箱密码");
+		}
+		});
+		
+	});
+</script>
+
+
+</head>
+<body>
+	
+	<input type="text" id="address" value="请输入邮箱地址">
+	<input type="text" id="password" value="请输入邮箱密码">
+	<input type="button" value="登陆">
+	
+
+</body>
+</html>
