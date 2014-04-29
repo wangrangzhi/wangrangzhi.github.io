@@ -9,46 +9,45 @@
 //等待dom元素加载完毕.
 $(function()
 	{
-		$("#address").focus(function() {
-			var txt_value = $(this).val();
-			if(txt_value == this.defaultValue)
-			{
-				$(this).val("");
-			}
-		});
-		$("#address").blur(function() {
-		var txt_val = $(this).val();
-		if(txt_val == "")
-		{
-			$(this).val(this.defaultValue);
-		}
-		});
+		var x = 10;
+		var y = 20;
 
-		$("#password").focus(function() {
-			var txt_value = $(this).val();
-			if(txt_value == "请输入邮箱密码")
-			{
-				$(this).val("");
-			}
+		$("a.tooltip").mouseover(function(e) {
+
+			this.myTitle = this.title;
+			this.title = "";
+
+			var tooltip = "<div id='tooltip'>"+this.myTitle+"<\/div>";
+			$("body").append(tooltip);
+			$("#tooltip")
+			.css({
+				"top": (e.pageY + y) + "px",
+				"left": (e.pageX + x) + "px"
+			}).show("fast");
+		}).mouseout(function() {
+
+			this.title = this.myTitle;
+
+			$("#tooltip").remove();
+		}).mousemove(function(e)
+			$("#tooltip")
+				.css({
+					"top": (e.pageY + y) + "px",
+					"left": (e.pageX + x) + "px",
+
+				});
 		});
-		$("#password").blur(function() {
-		var txt_val = $(this).val();
-		if(txt_val == "")
-		{
-			$(this).val("请输入邮箱密码");
-		}
-		});
-		
-	});
+	})
 </script>
 
 
 </head>
 <body>
 	
-	<input type="text" id="address" value="请输入邮箱地址">
-	<input type="text" id="password" value="请输入邮箱密码">
-	<input type="button" value="登陆">
+	<p><a href="#" class="tooltip" title="这是我的超链接提示1">tips1</a></p>
+	<p><a href="#" class="tooltip" title="这是我的超链接提示2">tips2</a></p>
+	<p><a href="" title="这是自带提示1">自带提示1</a></p>
+	<p><a href="" title="这是自带提示2">自带提示2</a></p>
 	
 
 </body>
