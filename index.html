@@ -3,24 +3,28 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>Document</title>
 </head>
-<body>
-	<h1>Hello World</h1>
-	
-	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="http://music.163.com/outchain/player?type=2&id=31152310&auto=1&height=66"></iframe>
-<h1>用github新建的博客，还么来得及改样式表，估计得过年以后再折腾了
-	
-
-    <script type="text/javascript">
-      
-	    var date = new Date();
-		var year = date.getFullYear();
-		var month = date.getMonth()+1;
-		var day = date.getDate();
-		var hour = date.getHours();
-		var minute = date.getMinutes();
-		var second = date.getSeconds();
-		alert(year+'年'+month+'月'+day+'日 '+hour':'+minute+':'+second)
-    </script>
+<script language="javascript" type="text/javascript">
+<!--
+//获得当前时间,刻度为一千分一秒
+var initializationTime=(new Date()).getTime();
+function showLeftTime()
+{
+var now=new Date();
+var year=now.getYear();
+var month=now.getMonth();
+var day=now.getDate();
+var hours=now.getHours();
+var minutes=now.getMinutes();
+var seconds=now.getSeconds();
+document.all.show.innerHTML=""+year+"年"+month+"月"+day+"日 "+hours+":"+minutes+":"+seconds+"";
+//一秒刷新一次显示时间
+var timeID=setTimeout(showLeftTime,1000);
+}
+//-->
+</script>
+</head>
+<body onload="showLeftTime()">
+<label id="show">显示时间的位置</label>
    
 </body>
 </html>
