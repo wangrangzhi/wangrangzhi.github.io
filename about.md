@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-Another minimal style of Jekyll theme for writers.
+主要是写一些个人随笔。技术的东西只是一些个人笔记。
